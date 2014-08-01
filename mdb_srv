@@ -1,0 +1,2 @@
+mongod --config /c/Temp/MongoDB/mongodb.cfg
+
