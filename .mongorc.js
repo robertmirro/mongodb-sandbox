@@ -1,5 +1,9 @@
-function findData() {
+function printData( collection ) {
+    if ( !collection ) {
+        return print( 'Specify a collection name...\n' );
+    }
+
     print( '\nRecords:' );
-    db.testData.find().forEach( printjson );
-    print( '\nCount: ' + db.testData.count() );
+    db[ collection ].find().forEach( printjson );
+    print( '\nCount: ' + db[ collection ].count() );
 }
