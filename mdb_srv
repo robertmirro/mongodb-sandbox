@@ -1,2 +1,2 @@
-mongod --config /c/Temp/MongoDB/mongodb.cfg
+mongod --config /c/Temp/MongoDB/mongodb_win7_32.cfg
 
