@@ -1,3 +1,0 @@
-cp ./.mongorc.js "$HOME"/.mongorc.js
-mongo node_demo
-
