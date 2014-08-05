@@ -1,0 +1,2 @@
+mongod --config /c/Dev/Db/MongoDB/mongodb_win7_64.cfg
+
