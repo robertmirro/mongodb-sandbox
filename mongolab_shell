@@ -1,0 +1,4 @@
+cp ./.mongorc.js "$HOME"/.mongorc.js
+mongo ds053439.mongolab.com:53439/node_demo -u $1 -p $2
+
+
