@@ -1,11 +1,12 @@
-function printData( collection , projection ) {
+function prettyPrintData( collection , criteria , projection ) {
     if ( !collection ) {
         return print( 'Specify a collection name...\n' );
     }
+    criteria = criteria || {};
     projection = projection || {};
 
     print( '\nRecords:' );
-    db[ collection ].find( {} , projection ).forEach( printjson );
+    db[ collection ].find( criteria , projection ).forEach( printjson );
     print( '\nCount: ' + db[ collection ].count() );
 }
 
