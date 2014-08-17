@@ -1,2 +1,7 @@
 
 mklink /H C:\Dev\Db\MongoDB\.mongorc.js C:\Users\dev\.mongorc.js
+
+C:\Dev\Db\MongoDB>fsutil hardlink list .mongorc.js
+\Dev\Db\MongoDB\.mongorc.js
+\Users\dev\.mongorc.js
+
