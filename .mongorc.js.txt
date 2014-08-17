@@ -1,0 +1,2 @@
+
+mklink /H C:\Dev\Db\MongoDB\.mongorc.js C:\Users\dev\.mongorc.js
