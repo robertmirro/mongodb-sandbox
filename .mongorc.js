@@ -23,3 +23,19 @@ function printKeys( collection ) {
     }
 }
 
+function prettyObjsLeftInBatch( collection , criteria , projection ) {
+    if ( !collection ) {
+        return print( 'Specify a collection name...\n' );
+    }
+    criteria = criteria || {};
+    projection = projection || {};
+
+    var c = db[ collection ].find( criteria , projection );
+    if ( c ) {
+        while ( c.hasNext() ) {
+            printjson( c.next() )
+            print( 'ObjsLeftInBatch: ' + c.objsLeftInBatch() );
+        }        
+    }
+}
+
