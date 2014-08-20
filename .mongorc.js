@@ -1,3 +1,8 @@
+
+var prompt = function() { 
+    return '\n[' + db + ( db.serverStatus().ok == '1' ? '@' + db.serverStatus().host : '' ) + '] ' + pwd() + '\n>'; 
+}
+
 function prettyPrintData( collection , criteria , projection ) {
     if ( !collection ) {
         return print( 'Specify a collection name...\n' );
