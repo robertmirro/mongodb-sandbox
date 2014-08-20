@@ -23,6 +23,19 @@ function printKeys( collection ) {
     }
 }
 
+function printAllKeys( collection ) {
+    if ( !collection ) {
+        return print( 'Specify a collection name...\n' );
+    }
+
+    var c = db[ collection ].find().toArray();
+    if ( c ) {
+        for ( var key in c ) {
+            print( Object.keys( c[ key ] ).sort() );
+        }
+    }
+}
+
 function prettyObjsLeftInBatch( collection , criteria , projection ) {
     if ( !collection ) {
         return print( 'Specify a collection name...\n' );
