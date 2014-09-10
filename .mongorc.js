@@ -12,7 +12,8 @@ function prettyPrintData( collection , criteria , projection ) {
 
     print( '\nRecords:' );
     db[ collection ].find( criteria , projection ).forEach( printjson );
-    print( '\nCount: ' + db[ collection ].count() );
+    print( '\nRecords Returned: ' + db[ collection ].find( criteria , projection ).count() );
+    print( '\nTotal Count: ' + db[ collection ].count() );
 }
 
 function printKeys( collection ) {
